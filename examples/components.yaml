@@ -1,0 +1,97 @@
+# components.yaml — Example Blueprint Manifest
+# ─────────────────────────────────────────────────────────────────
+# This file acts as a curated registry of domain-level UI components.
+# AI agents and developers read this file to understand the app's
+# component vocabulary, where each file lives, and its purpose.
+#
+# HOW TO USE:
+#   1. Register key domain components here (not every tiny helper).
+#   2. Group entries by feature area for scannability.
+#   3. Add a @see components.yaml backlink in each component's TSDoc/JSDoc.
+#   4. Run a drift detector periodically to catch unregistered or dead entries.
+#
+# WHY:
+#   When you point an AI coding tool at this file, it immediately understands
+#   your component naming conventions, file structure, and design vocabulary.
+#   New components get built in the same style — not hallucinated from scratch.
+# ─────────────────────────────────────────────────────────────────
+
+components:
+  # ─── Icons ────────────────────────────────────────────────────────────────────
+  # Custom Figma-designed SVGs that aren't available in lucide-react.
+  # These follow the LucideProps interface so they behave identically
+  # to standard library icons at all usage sites.
+  # Import via barrel: import { BuildIcon } from "@/components/icons"
+
+  - id: build-icon
+    name: Build Icon
+    path: src/components/icons/BuildIcon.tsx
+    description: "Custom SVG icon for the Build mode tab. Not available in lucide-react."
+    status: implemented
+
+  # ─── Layout ───────────────────────────────────────────────────────────────────
+
+  - id: layout
+    name: Layout
+    path: src/components/Layout.tsx
+    description: "Application shell with responsive sidebar and mobile bottom nav. Wraps every authenticated page."
+    status: implemented
+
+  - id: mobile-navigation
+    name: Mobile Navigation
+    path: src/components/Layout/MobileNavigation.tsx
+    description: "Fixed bottom tab bar for mobile. Primary navigation between Home, Projects, People, and Profile."
+    status: implemented
+
+  # ─── Project Listing ──────────────────────────────────────────────────────────
+
+  - id: project-card
+    name: Project Card
+    path: src/components/projects/ProjectCard.tsx
+    description: "Grid card for the projects listing page with hero image, title overlay, and inline CRUD menu."
+    status: implemented
+    figma: "https://www.figma.com/file/YOUR_FILE_ID?node-id=CARD_NODE_ID"
+
+  - id: projects-grid
+    name: Projects Grid
+    path: src/components/projects/ProjectsGrid.tsx
+    description: "Responsive grid container for ProjectCards. Handles loading skeletons and empty state."
+    status: implemented
+
+  # ─── Project View ─────────────────────────────────────────────────────────────
+
+  - id: project-view-header
+    name: Project View Header
+    path: src/components/project-view/ProjectViewHeader.tsx
+    description: "Mode-aware hero header for the project detail view."
+    status: implemented
+
+  - id: mode-selector
+    name: Mode Selector
+    path: src/components/project-view/ModeSelector.tsx
+    description: "Three-state pill toggle for switching between Build, Gallery, and Read modes."
+    status: implemented
+    variants:
+      - Build
+      - Gallery
+      - Read
+
+  - id: empty-state
+    name: Empty State
+    path: src/components/project-view/EmptyState.tsx
+    description: "Zero-entry state shown when a project has no content yet. Displays onboarding CTAs."
+    status: implemented
+
+  # ─── Interview ────────────────────────────────────────────────────────────────
+
+  - id: interview-bottom-bar
+    name: Interview Bottom Bar
+    path: src/components/interview/InterviewBottomBar.tsx
+    description: "Fixed bottom bar during an interview session with mode selector and recording controls."
+    status: implemented
+
+  - id: interview-mode-selector-button
+    name: Interview Mode Selector Button
+    path: src/components/interview/InterviewModeSelectorButton.tsx
+    description: "Standalone trigger button for switching interview modes (AI, chat, record, write)."
+    status: implemented

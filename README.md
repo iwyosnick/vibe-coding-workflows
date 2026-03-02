@@ -14,7 +14,8 @@ This repository accompanies a blog series on vibe coding:
 
 1. **[An Agent Rules File That Will Change How You Vibe Code](https://www.tayle.co/blog/agent-rules-file)** — The global rules file that brings structure to AI-assisted development
 2. **[I Built a One-Command Health Check for My AI-Built App](https://www.tayle.co/blog/test-core-workflow)** — The `/test-core` workflow (this repo)
-3. *More coming soon...*
+3. **Designing with AI: My Figma-to-Code Workflow** — How a components.yaml manifest bridges design and AI development
+4. *More coming soon...*
 
 ## Contents
 
@@ -25,6 +26,10 @@ This repository accompanies a blog series on vibe coding:
 ### Workflows
 
 - **[test-core.md](workflows/test-core.md)** — Comprehensive health check workflow. Runs linting, type checking, security audits, unit tests, build verification, and end-to-end UX tests in sequence.
+
+### Examples
+
+- **[components.yaml](examples/components.yaml)** — Example component manifest that acts as an AI-readable blueprint for your design system. Register key components, document their purpose, and guide AI tools to build new components in your established style.
 
 ## How to Use
 
