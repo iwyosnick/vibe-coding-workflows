@@ -12,8 +12,8 @@ Each workflow is a single command that runs a comprehensive set of checks. If an
 
 This repository accompanies a blog series on vibe coding:
 
-1. **[An Agent Rules File That Will Change How You Vibe Code](https://www.tayle.co/blog/agent-rules-file)** — The global rules file that brings structure to AI-assisted development
-2. **[I Built a One-Command Health Check for My AI-Built App](https://www.tayle.co/blog/test-core-workflow)** — The `/test-core` workflow (this repo)
+1. **[An Agent Rules File That Will Change How You Vibe Code](https://www.ian-wyosnick.com/blog/agent-rules-file)** — The global rules file that brings structure to AI-assisted development
+2. **[I Built a One-Command Health Check for My AI-Built App](https://www.ian-wyosnick.com/blog/test-core-workflow)** — The `/test-core` workflow (this repo)
 3. **Designing with AI: My Figma-to-Code Workflow** — How a components.yaml manifest bridges design and AI development
 4. *More coming soon...*
 
